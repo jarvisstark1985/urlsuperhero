@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="URL SuperHero - AI-powered domain name marketplace. Search, register, and manage website URLs with Porkbun integration.">
+    <meta name="keywords" content="domain names, URL marketplace, AI domain search, Porkbun domains, website URLs">
+    <meta name="theme-color" content="#0A0A0A">
+    <link rel="canonical" href="https://urlsuperhero.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="URL SuperHero - AI-Powered Domain Marketplace">
+    <meta property="og:description" content="Find and register your perfect domain name with AI-powered suggestions and instant registration.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://urlsuperhero.com/">
+    <meta property="og:image" content="https://urlsuperhero.com/og-image.png">
+    <meta property="og:site_name" content="URL SuperHero">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="URL SuperHero - AI-Powered Domain Marketplace">
+    <meta name="twitter:description" content="Find and register your perfect domain name with AI-powered suggestions.">
+    <meta name="twitter:image" content="https://urlsuperhero.com/twitter-image.png">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P2C3KN7T');</script>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=[GA4-URL-ID]"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '[GA4-URL-ID]');
+    </script>
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "URL SuperHero",
+        "description": "AI-powered domain name marketplace with Porkbun integration",
+        "url": "https://urlsuperhero.com",
+        "applicationCategory": "BusinessApplication",
+        "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "USD",
+            "lowPrice": "9.99",
+            "highPrice": "99.99"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "2847"
+        }
+    }
+    </script>
+
+    <title>URL SuperHero - AI-Powered Domain Marketplace</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --black: #0A0A0A;
+            --card: #141414;
+            --card-border: rgba(255,255,255,0.06);
+            --orange: #FF6B35;
+            --yellow: #FFD93D;
+            --blue: #4ECDC4;
+            --red: #FF4444;
+            --purple: #6C63FF;
+            --teal: #4ECDC4;
+            --pink: #E97698;
+            --white: #FFFFFF;
+            --gray: #888;
+            --light-gray: #B0B0B0;
+            --max-w: 1400px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(20px);
+            background: rgba(10, 10, 10, 0.85);
+            border-bottom: 1px solid var(--card-border);
+            padding: 1rem 2rem;
+        }
+
+        .nav-container {
+            max-width: var(--max-w);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--orange), var(--yellow));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--orange);
+        }
+
+        .nav-cta {
+            background: var(--orange);
+            color: var(--black);
+            padding: 0.875rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 6rem 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(78, 205, 196, 0.1));
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .hero-content {
+            max-width: var(--max-w);
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--orange), var(--yellow));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--light-gray);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .search-bar-wrapper {
+            display: flex;
+            gap: 1rem;
+            max-width: 600px;
+            margin: 2rem auto;
+            margin-bottom: 3rem;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            background: var(--card);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            color: var(--white);
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--orange);
+            box-shadow: 0 0 20px rgba(255, 107, 53, 0.2);
+        }
+
+        .search-input::placeholder {
+            color: var(--gray);
+        }
+
+        .search-btn {
+            padding: 1rem 2rem;
+            background: var(--orange);
+            color: var(--black);
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .search-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        .social-proof {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .proof-item {
+            text-align: center;
+        }
+
+        .proof-number {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--orange), var(--yellow));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .proof-label {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Domain Search Results */
+        .search-results {
+            display: none;
+            max-width: var(--max-w);
+            margin: 2rem auto;
+            gap: 1rem;
+        }
+
+        .search-results.active {
+            display: grid;
+        }
+
+        .domain-result {
+            background: var(--card);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
+        }
+
+        .domain-result:hover {
+            border-color: var(--orange);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.2);
+        }
+
+        .domain-info {
+            flex: 1;
+        }
+
+        .domain-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .domain-status {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        .domain-status.available {
+            color: #4CAF50;
+        }
+
+        .domain-status.taken {
+            color: var(--red);
+        }
+
+        .domain-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 2rem;
+            min-width: 100px;
+            text-align: right;
+        }
+
+        .domain-action {
+            padding: 0.875rem 1.5rem;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            font-family: 'Inter', sans-serif;
+            background: var(--orange);
+            color: var(--black);
+        }
+
+        .domain-action:hover {
+            transform: translateY(-2px);
+        }
+
+        .domain-action.offer {
+            background: transparent;
+            border: 1px solid var(--orange);
+            color: var(--orange);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            display: none;
+        }
+
+        .loading.active {
+            display: block;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border: 4px solid var(--card-border);
+            border-top-color: var(--orange);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Features Grid */
+        .features {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.05), rgba(78, 205, 196, 0.05));
+        }
+
+        .section-container {
+            max-width: var(--max-w);
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--card);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            border-color: var(--orange);
+            transform: translateY(-8px);
+            box-shadow: 0 16px 40px rgba(255, 107, 53, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: var(--light-gray);
+            line-height: 1.8;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            padding: 6rem 2rem;
+            border-top: 1px solid var(--card-border);
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .step {
+            text-align: center;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--orange), var(--yellow));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--black);
+            margin: 0 auto 1rem;
+        }
+
+        .step h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .step p {
+            color: var(--light-gray);
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.05), rgba(78, 205, 196, 0.05));
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pricing-card {
+            background: var(--card);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .pricing-card:hover {
+            border-color: var(--orange);
+        }
+
+        .extension {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .price-tag {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--orange);
+            margin: 1rem 0;
+        }
+
+        .price-note {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 6rem 2rem;
+            border-top: 1px solid var(--card-border);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 3rem auto 0;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--card-border);
+            padding: 1.5rem 0;
+        }
+
+        .faq-item:first-child {
+            padding-top: 0;
+        }
+
+        .faq-question {
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color 0.3s;
+        }
+
+        .faq-question:hover {
+            color: var(--orange);
+        }
+
+        .faq-toggle {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .faq-answer {
+            display: none;
+            margin-top: 1rem;
+            color: var(--light-gray);
+            line-height: 1.8;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+
+        .faq-toggle.active {
+            transform: rotate(180deg);
+        }
+
+        /* Referral Section */
+        .referral {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(78, 205, 196, 0.1));
+            text-align: center;
+            border-top: 1px solid var(--card-border);
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .referral h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .referral-subtitle {
+            color: var(--light-gray);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .referral-details {
+            background: var(--card);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            text-align: left;
+        }
+
+        .referral-details li {
+            margin-bottom: 1rem;
+            color: var(--light-gray);
+        }
+
+        .referral-cta {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--orange);
+            color: var(--black);
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .referral-cta:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        /* Cross-Site Promotion */
+        .network {
+            padding: 6rem 2rem;
+        }
+
+        .network h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 3rem;
+        }
+
+        .network-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            max-width: var(--max-w);
+            margin: 0 auto;
+        }
+
+        .network-link {
+            background: var(--card);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            text-align: center;
+            text-decoration: none;
+            color: var(--white);
+            transition: all 0.3s;
+        }
+
+        .network-link:hover {
+            border-color: var(--orange);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.2);
+        }
+
+        .network-link strong {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--orange);
+        }
+
+        /* CTA Banner */
+        .cta-banner {
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, var(--orange), var(--yellow));
+            text-align: center;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .cta-banner h2 {
+            color: var(--black);
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+        }
+
+        .cta-banner-btn {
+            display: inline-block;
+            padding: 1rem 3rem;
+            background: var(--black);
+            color: var(--orange);
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .cta-banner-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--card);
+            border-top: 1px solid var(--card-border);
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-container {
+            max-width: var(--max-w);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-col a {
+            color: var(--light-gray);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-col a:hover {
+            color: var(--orange);
+        }
+
+        .footer-brand p {
+            color: var(--light-gray);
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--card-border);
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Cart */
+        .cart-badge {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--orange);
+            color: var(--black);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            z-index: 500;
+            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        .cart-badge:hover {
+            transform: scale(1.1);
+        }
+
+        .cart-badge.hidden {
+            display: none;
+        }
+
+        .cart-dropdown {
+            position: fixed;
+            bottom: 5rem;
+            right: 2rem;
+            background: var(--card);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            width: 300px;
+            max-height: 400px;
+            overflow-y: auto;
+            display: none;
+            z-index: 500;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .cart-dropdown.active {
+            display: block;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .cart-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .cart-total {
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin: 1rem 0;
+            text-align: right;
+        }
+
+        .checkout-btn {
+            width: 100%;
+            padding: 1rem;
+            background: var(--orange);
+            color: var(--black);
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .checkout-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero {
+                padding: 3rem 1rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .search-bar-wrapper {
+                flex-direction: column;
+            }
+
+            .domain-result {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: flex-start;
+            }
+
+            .domain-price {
+                margin: 0;
+                text-align: left;
+            }
+
+            .social-proof {
+                gap: 1.5rem;
+            }
+
+            .features,
+            .how-it-works,
+            .pricing,
+            .faq,
+            .referral,
+            .network {
+                padding: 3rem 1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+
+            .cart-dropdown {
+                width: calc(100% - 2rem);
+                right: 1rem;
+            }
+        }
+
+        /* Porkbun Attribution */
+        .porkbun-note {
+            text-align: center;
+            color: var(--gray);
+            font-size: 0.85rem;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2C3KN7T" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">URL SuperHero</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#login" style="margin-left: 1rem; opacity: 0.7;">Login</a></li>
+                <li><button class="nav-cta" onclick="document.getElementById('hero-search').focus()">Search Domains</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Find Your Perfect Domain — <span class="gradient-text">Powered by AI</span></h1>
+            <p class="hero-subtitle">AI-powered domain search with intelligent suggestions. Register instantly via Porkbun integration.</p>
+
+            <div class="search-bar-wrapper">
+                <input type="text" id="hero-search" class="search-input" placeholder="e.g., myawesomestartup.com">
+                <button class="search-btn" onclick="performSearch()">Search</button>
+            </div>
+
+            <div class="porkbun-note">Domains powered by Porkbun</div>
+
+            <div class="social-proof">
+                <div class="proof-item">
+                    <div class="proof-number">2.8K+</div>
+                    <div class="proof-label">Domains Registered</div>
+                </div>
+                <div class="proof-item">
+                    <div class="proof-number">4.8★</div>
+                    <div class="proof-label">Average Rating</div>
+                </div>
+                <div class="proof-item">
+                    <div class="proof-number">47K+</div>
+                    <div class="proof-label">Happy Users</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loading Indicator -->
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+        <p style="margin-top: 1rem; color: var(--gray);">Searching domains...</p>
+    </div>
+
+    <!-- Domain Search Results -->
+    <div class="search-results" id="searchResults" style="padding: 0 2rem; margin-bottom: 3rem;"></div>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="section-container">
+            <h2 class="section-title">Why URL SuperHero?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI Domain Suggestions</h3>
+                    <p>Our AI analyzes your brand and recommends available domains that perfectly match your vision.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Instant Registration</h3>
+                    <p>Register domains in seconds with our Porkbun-powered system. No delays, no complications.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎛️</div>
+                    <h3>Domain Management</h3>
+                    <p>Manage DNS records, transfers, renewals, and more from your unified dashboard.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="section-container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Search</h3>
+                    <p>Enter your desired domain name and let our system check availability across all extensions.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Select</h3>
+                    <p>Choose from available domains and add them to your cart with just one click.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Own</h3>
+                    <p>Complete checkout with Stripe and your domains are registered instantly via Porkbun.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="section-container">
+            <h2 class="section-title">Domain Pricing</h2>
+            <p style="text-align: center; color: var(--light-gray); margin-bottom: 2rem;">Standard annual renewal rates. Premium domains priced individually.</p>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="extension">.com</div>
+                    <div class="price-tag">$9.99</div>
+                    <p class="price-note">Most popular</p>
+                    <button class="nav-cta" onclick="document.getElementById('hero-search').value = '.com'; document.getElementById('hero-search').focus();">Search .com</button>
+                </div>
+                <div class="pricing-card">
+                    <div class="extension">.net</div>
+                    <div class="price-tag">$11.79</div>
+                    <p class="price-note">Business friendly</p>
+                    <button class="nav-cta" onclick="document.getElementById('hero-search').value = '.net'; document.getElementById('hero-search').focus();">Search .net</button>
+                </div>
+                <div class="pricing-card">
+                    <div class="extension">.io</div>
+                    <div class="price-tag">$29.99</div>
+                    <p class="price-note">Tech startup choice</p>
+                    <button class="nav-cta" onclick="document.getElementById('hero-search').value = '.io'; document.getElementById('hero-search').focus();">Search .io</button>
+                </div>
+                <div class="pricing-card">
+                    <div class="extension">.ai</div>
+                    <div class="price-tag">$49.99</div>
+                    <p class="price-note">AI-focused brands</p>
+                    <button class="nav-cta" onclick="document.getElementById('hero-search').value = '.ai'; document.getElementById('hero-search').focus();">Search .ai</button>
+                </div>
+                <div class="pricing-card">
+                    <div class="extension">.org</div>
+                    <div class="price-tag">$12.99</div>
+                    <p class="price-note">Non-profits</p>
+                    <button class="nav-cta" onclick="document.getElementById('hero-search').value = '.org'; document.getElementById('hero-search').focus();">Search .org</button>
+                </div>
+                <div class="pricing-card">
+                    <div class="extension">Premium</div>
+                    <div class="price-tag">Custom</div>
+                    <p class="price-note">On request</p>
+                    <button class="nav-cta" onclick="alert('Contact support for premium domains.')">Inquire</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="section-container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Do you offer a free trial?</span>
+                        <div class="faq-toggle">▼</div>
+                    </div>
+                    <div class="faq-answer">We don't offer free trials. However, all paid subscribers receive 1 month of free Replit access as a subscriber bonus.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>How does the referral program work?</span>
+                        <div class="faq-toggle">▼</div>
+                    </div>
+                    <div class="faq-answer">Earn 80% commission on the first payment from each customer you refer. This is a one-time commission per referral. You can refer unlimited customers and earn from each first payment. Share your unique referral link to get started.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>How quickly can I register a domain?</span>
+                        <div class="faq-toggle">▼</div>
+                    </div>
+                    <div class="faq-answer">Once you complete checkout, your domain is registered instantly through our Porkbun integration. You'll have immediate access to your domain management dashboard.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Can I transfer domains from another registrar?</span>
+                        <div class="faq-toggle">▼</div>
+                    </div>
+                    <div class="faq-answer">Yes! We support domain transfers from any registrar. The process typically takes 5-7 days. Our support team will guide you through each step.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>What payment methods do you accept?</span>
+                        <div class="faq-toggle">▼</div>
+                    </div>
+                    <div class="faq-answer">We accept all major credit cards (Visa, Mastercard, American Express) and payment through Stripe, which supports many alternative payment methods.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Is DNS management included?</span>
+                        <div class="faq-toggle">▼</div>
+                    </div>
+                    <div class="faq-answer">Yes! Full DNS management is included with every domain. Point your domain to your website, email provider, or any service you use.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Do you offer domain privacy protection?</span>
+                        <div class="faq-toggle">▼</div>
+                    </div>
+                    <div class="faq-answer">Yes, WHOIS privacy is available for most domain extensions at a small additional cost. This keeps your personal information private from public WHOIS lookups.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Referral Section -->
+    <section class="referral">
+        <h2>Earn 80% Commission</h2>
+        <p class="referral-subtitle">Share your unique referral link and earn generous commissions on every customer's first payment.</p>
+
+        <div class="referral-details">
+            <ul>
+                <li>✓ 80% commission on first payment (one-time per referral)</li>
+                <li>✓ Unlimited referrals — no cap on earnings</li>
+                <li>✓ Real-time referral tracking dashboard</li>
+                <li>✓ Weekly payouts via Stripe Connect</li>
+                <li>✓ Marketing materials and assets provided</li>
+            </ul>
+        </div>
+
+        <button class="referral-cta" onclick="alert('Referral program signup coming soon. Join our waitlist!')">Get Your Referral Link</button>
+    </section>
+
+    <!-- Cross-Site Promotion -->
+    <section class="network">
+        <h2>Part of the SuperHero Network</h2>
+        <div class="network-grid">
+            <a href="https://theaisuperheroes.com" class="network-link" target="_blank">
+                <strong>TheAISuperHeroes.com</strong>
+                <span>AI Business Hub</span>
+            </a>
+            <a href="https://mcpsuperhero.com" class="network-link" target="_blank">
+                <strong>MCPSuperHero.com</strong>
+                <span>AI Connections</span>
+            </a>
+            <a href="https://seoaisuperhero.com" class="network-link" target="_blank">
+                <strong>SEOAISuperHero.com</strong>
+                <span>AI SEO</span>
+            </a>
+            <a href="https://shopifysuperhero.com" class="network-link" target="_blank">
+                <strong>ShopifySuperHero.com</strong>
+                <span>E-commerce AI</span>
+            </a>
+            <a href="https://startbizsuperhero.com" class="network-link" target="_blank">
+                <strong>StartBizSuperHero.com</strong>
+                <span>Website Builder</span>
+            </a>
+            <a href="https://resumesuperhero.com" class="network-link" target="_blank">
+                <strong>ResumeSuperHero.com</strong>
+                <span>Career AI</span>
+            </a>
+            <a href="https://replitsuperhero.com" class="network-link" target="_blank">
+                <strong>ReplitSuperHero.com</strong>
+                <span>Code Platform Deals</span>
+            </a>
+            <a href="https://claudsuperhero.com" class="network-link" target="_blank">
+                <strong>ClaudSuperHero.com</strong>
+                <span>Claude AI Deals</span>
+            </a>
+            <a href="https://agenticsuperhero.com" class="network-link" target="_blank">
+                <strong>AgenticSuperHero.com</strong>
+                <span>Agentic AI Deals</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <h2>Find Your Domain Today</h2>
+        <button class="cta-banner-btn" onclick="document.getElementById('hero-search').focus(); window.scrollTo({top: 0, behavior: 'smooth'})">Start Searching</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col footer-brand">
+                <h4>URL SuperHero</h4>
+                <p>The AI-powered domain marketplace. Find, register, and manage your perfect domain in seconds.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="https://theaisuperheroes.com">TheAISuperHeroes.com</a></li>
+                    <li><a href="https://mcpsuperhero.com">MCPSuperHero.com</a></li>
+                    <li><a href="https://seoaisuperhero.com">SEOAISuperHero.com</a></li>
+                    <li><a href="https://shopifysuperhero.com">ShopifySuperHero.com</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#support">Support</a></li>
+                    <li><a href="#api">API Docs</a></li>
+                    <li><a href="#status">Status Page</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                    <li><a href="#cookies">Cookie Policy</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 URL SuperHero. All rights reserved. Domains powered by Porkbun.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Badge -->
+    <div class="cart-badge" id="cartBadge" onclick="toggleCart()">
+        <span id="cartCount">0</span>
+    </div>
+
+    <!-- Cart Dropdown -->
+    <div class="cart-dropdown" id="cartDropdown">
+        <h3 style="margin-bottom: 1rem;">Shopping Cart</h3>
+        <div id="cartItems"></div>
+        <div class="cart-total">Total: $<span id="cartTotal">0.00</span></div>
+        <button class="checkout-btn" onclick="checkout()">Checkout</button>
+    </div>
+
+    <!-- Referral Tracking Script -->
+    <script src="https://cdn.example.com/referral-tracking.js" async></script>
+
+    <!-- Main JavaScript -->
+    <script>
+        // Cart management
+        let cart = JSON.parse(localStorage.getItem('domainCart')) || [];
+
+        function updateCartUI() {
+            const count = cart.length;
+            document.getElementById('cartCount').textContent = count;
+
+            if (count === 0) {
+                document.getElementById('cartBadge').classList.add('hidden');
+            } else {
+                document.getElementById('cartBadge').classList.remove('hidden');
+            }
+
+            // Update cart dropdown
+            const cartItemsDiv = document.getElementById('cartItems');
+            cartItemsDiv.innerHTML = '';
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                const itemEl = document.createElement('div');
+                itemEl.className = 'cart-item';
+                itemEl.innerHTML = `
+                    <div>
+                        <strong>${item.name}</strong>
+                        <div style="color: var(--gray); font-size: 0.85rem;">$${item.price.toFixed(2)}</div>
+                    </div>
+                    <button onclick="removeFromCart(${index})" style="background: none; border: none; color: var(--red); cursor: pointer; font-weight: 600;">Remove</button>
+                `;
+                cartItemsDiv.appendChild(itemEl);
+                total += item.price;
+            });
+
+            document.getElementById('cartTotal').textContent = total.toFixed(2);
+        }
+
+        function addToCart(domain, price) {
+            cart.push({ name: domain, price: parseFloat(price) });
+            localStorage.setItem('domainCart', JSON.stringify(cart));
+            updateCartUI();
+
+            // Show confirmation
+            const btn = event.target;
+            const originalText = btn.textContent;
+            btn.textContent = 'Added!';
+            setTimeout(() => {
+                btn.textContent = originalText;
+            }, 2000);
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            localStorage.setItem('domainCart', JSON.stringify(cart));
+            updateCartUI();
+        }
+
+        function toggleCart() {
+            document.getElementById('cartDropdown').classList.toggle('active');
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                alert('Your cart is empty.');
+                return;
+            }
+
+            // Redirect to Stripe checkout (placeholder)
+            const domainsList = cart.map(item => item.name).join(',');
+            window.location.href = `https://checkout.stripe.com/pay?domains=${encodeURIComponent(domainsList)}`;
+        }
+
+        // Domain search
+        function performSearch() {
+            const searchInput = document.getElementById('hero-search').value.trim();
+            if (!searchInput) {
+                alert('Please enter a domain to search.');
+                return;
+            }
+
+            // Show loading
+            document.getElementById('loading').classList.add('active');
+            document.getElementById('searchResults').classList.remove('active');
+
+            // Simulate API call
+            setTimeout(() => {
+                const results = generateMockResults(searchInput);
+                displayResults(results);
+            }, 1500);
+        }
+
+        function generateMockResults(baseName) {
+            // Remove any extension already included
+            const cleanName = baseName.replace(/\.(com|net|org|io|ai)$/, '').toLowerCase();
+
+            const extensions = ['com', 'net', 'org', 'io', 'ai'];
+            const prices = {
+                'com': 9.99,
+                'net': 11.79,
+                'org': 12.99,
+                'io': 29.99,
+                'ai': 49.99
+            };
+
+            return extensions.map(ext => {
+                const fullDomain = `${cleanName}.${ext}`;
+                // Randomly determine availability
+                const available = Math.random() > 0.4;
+
+                return {
+                    domain: fullDomain,
+                    ext: ext,
+                    available: available,
+                    price: prices[ext]
+                };
+            });
+        }
+
+        function displayResults(results) {
+            document.getElementById('loading').classList.remove('active');
+
+            const resultsDiv = document.getElementById('searchResults');
+            resultsDiv.innerHTML = '';
+
+            results.forEach(result => {
+                const resultEl = document.createElement('div');
+                resultEl.className = 'domain-result';
+
+                const status = result.available ?
+                    '<span class="domain-status available">✓ Available</span>' :
+                    '<span class="domain-status taken">✗ Taken</span>';
+
+                const actionBtn = result.available ?
+                    `<button class="domain-action" onclick="addToCart('${result.domain}', ${result.price})">Add to Cart</button>` :
+                    `<button class="domain-action offer" onclick="alert('Make Offer coming soon!')">Make Offer</button>`;
+
+                resultEl.innerHTML = `
+                    <div class="domain-info">
+                        <div class="domain-name">${result.domain}</div>
+                        ${status}
+                    </div>
+                    ${result.available ? `<div class="domain-price">$${result.price.toFixed(2)}/yr</div>` : '<div class="domain-price">—</div>'}
+                    ${actionBtn}
+                `;
+
+                resultsDiv.appendChild(resultEl);
+            });
+
+            resultsDiv.classList.add('active');
+            resultsDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        // FAQ toggle
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const toggle = element.querySelector('.faq-toggle');
+
+            // Close all other FAQs
+            document.querySelectorAll('.faq-answer.active').forEach(el => {
+                if (el !== answer) {
+                    el.classList.remove('active');
+                    el.previousElementSibling.querySelector('.faq-toggle').classList.remove('active');
+                }
+            });
+
+            // Toggle current FAQ
+            answer.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+
+        // Initialize
+        updateCartUI();
+
+        // Allow Enter key in search
+        document.getElementById('hero-search').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+    </script>
+</body>
+</html>
