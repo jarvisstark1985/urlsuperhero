@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="URL SuperHero - AI-powered domain name marketplace. Search, register, and manage website URLs with Porkbun integration.">
-    <meta name="keywords" content="domain names, URL marketplace, AI domain search, Porkbun domains, website URLs">
+    <meta name="description" content="URL SuperHero - AI-powered domain + hosting infrastructure for AI-ready businesses. $17.99/month includes domain registration, Cloudflare hosting, and AI-optimized DNS.">
+    <meta name="keywords" content="domain registration, web hosting, AI domain, cloud infrastructure, Cloudflare, SSL certificate">
     <meta name="theme-color" content="#0A0A0A">
+    <meta name="msvalidate.01" content="urlsuperhero-bing-verification">
     <link rel="canonical" href="https://urlsuperhero.com/">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="URL SuperHero - AI-Powered Domain Marketplace">
-    <meta property="og:description" content="Find and register your perfect domain name with AI-powered suggestions and instant registration.">
+    <meta property="og:title" content="URL SuperHero - AI-Powered Domain + Hosting">
+    <meta property="og:description" content="Complete domain + hosting infrastructure with AI domain selection. $17.99/month all-inclusive.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://urlsuperhero.com/">
     <meta property="og:image" content="https://urlsuperhero.com/og-image.png">
@@ -18,21 +19,12 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="URL SuperHero - AI-Powered Domain Marketplace">
-    <meta name="twitter:description" content="Find and register your perfect domain name with AI-powered suggestions.">
+    <meta name="twitter:title" content="URL SuperHero - AI-Powered Domain + Hosting">
+    <meta name="twitter:description" content="AI domain + hosting infrastructure. $17.99/month all-inclusive.">
     <meta name="twitter:image" content="https://urlsuperhero.com/twitter-image.png">
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P2C3KN7T');</script>
-
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=[GA4-URL-ID]"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '[GA4-URL-ID]');
-    </script>
 
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
@@ -40,24 +32,24 @@
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "URL SuperHero",
-        "description": "AI-powered domain name marketplace with Porkbun integration",
+        "description": "AI-powered domain registration + hosting infrastructure built for AI-ready businesses",
         "url": "https://urlsuperhero.com",
         "applicationCategory": "BusinessApplication",
         "offers": {
-            "@type": "AggregateOffer",
+            "@type": "Offer",
             "priceCurrency": "USD",
-            "lowPrice": "9.99",
-            "highPrice": "99.99"
+            "price": "17.99",
+            "pricingPattern": "http://purl.org/goodrelations/v1#Subscription"
         },
         "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "ratingCount": "2847"
+            "ratingValue": "4.9",
+            "ratingCount": "3200"
         }
     }
     </script>
 
-    <title>URL SuperHero - AI-Powered Domain Marketplace</title>
+    <title>URL SuperHero - AI-Powered Domain + Hosting Infrastructure</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
@@ -131,6 +123,7 @@
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s;
+            cursor: pointer;
         }
 
         .nav-links a:hover {
@@ -186,43 +179,105 @@
             font-size: 1.2rem;
             color: var(--light-gray);
             margin-bottom: 2rem;
-            max-width: 600px;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
         }
 
-        .search-bar-wrapper {
-            display: flex;
-            gap: 1rem;
-            max-width: 600px;
+        /* AI Chat Agent */
+        .chat-container {
+            max-width: 700px;
             margin: 2rem auto;
-            margin-bottom: 3rem;
+            background: var(--card);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 2rem;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
         }
 
-        .search-input {
+        .chat-messages {
             flex: 1;
-            padding: 1rem 1.5rem;
-            background: var(--card);
+            overflow-y: auto;
+            margin-bottom: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .chat-message {
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .message-ai {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .message-user {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .message-bubble {
+            padding: 1rem;
+            border-radius: 12px;
+            max-width: 80%;
+            word-wrap: break-word;
+        }
+
+        .message-ai .message-bubble {
+            background: rgba(255, 107, 53, 0.1);
+            border: 1px solid var(--card-border);
+            color: var(--white);
+        }
+
+        .message-user .message-bubble {
+            background: var(--orange);
+            color: var(--black);
+            font-weight: 500;
+        }
+
+        .chat-input-wrapper {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .chat-input {
+            flex: 1;
+            padding: 0.875rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
             border: 1px solid var(--card-border);
             border-radius: 12px;
             color: var(--white);
-            font-size: 1rem;
             font-family: 'Inter', sans-serif;
             transition: all 0.3s;
         }
 
-        .search-input:focus {
+        .chat-input:focus {
             outline: none;
             border-color: var(--orange);
             box-shadow: 0 0 20px rgba(255, 107, 53, 0.2);
         }
 
-        .search-input::placeholder {
+        .chat-input::placeholder {
             color: var(--gray);
         }
 
-        .search-btn {
-            padding: 1rem 2rem;
+        .chat-send-btn {
+            padding: 0.875rem 1.5rem;
             background: var(--orange);
             color: var(--black);
             border: none;
@@ -233,9 +288,117 @@
             font-family: 'Inter', sans-serif;
         }
 
-        .search-btn:hover {
-            transform: translateY(-4px);
+        .chat-send-btn:hover {
+            transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        /* Domain Results Grid */
+        .domain-grid {
+            display: none;
+            max-width: var(--max-w);
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .domain-grid.active {
+            display: grid;
+        }
+
+        .domain-grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .domain-card {
+            background: var(--card);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .domain-card:hover {
+            border-color: var(--orange);
+            transform: translateY(-8px);
+            box-shadow: 0 16px 40px rgba(255, 107, 53, 0.2);
+        }
+
+        .domain-card-name {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            break-all: break-word;
+        }
+
+        .domain-card-price {
+            font-size: 1.5rem;
+            color: var(--orange);
+            margin-bottom: 0.5rem;
+        }
+
+        .domain-card-period {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .domain-claim-btn {
+            width: 100%;
+            padding: 1rem;
+            background: var(--orange);
+            color: var(--black);
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .domain-claim-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        .scanning-animation {
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        .scanning-dots {
+            display: inline-block;
+        }
+
+        .scanning-dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--orange);
+            margin: 0 6px;
+            animation: scan 1.4s infinite;
+        }
+
+        .scanning-dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .scanning-dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes scan {
+            0%, 60%, 100% {
+                opacity: 0.3;
+            }
+            30% {
+                opacity: 1;
+            }
         }
 
         .social-proof {
@@ -263,112 +426,6 @@
             color: var(--gray);
             font-size: 0.9rem;
             margin-top: 0.5rem;
-        }
-
-        /* Domain Search Results */
-        .search-results {
-            display: none;
-            max-width: var(--max-w);
-            margin: 2rem auto;
-            gap: 1rem;
-        }
-
-        .search-results.active {
-            display: grid;
-        }
-
-        .domain-result {
-            background: var(--card);
-            border: 1px solid var(--card-border);
-            border-radius: 16px;
-            padding: 1.5rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: all 0.3s;
-        }
-
-        .domain-result:hover {
-            border-color: var(--orange);
-            transform: translateY(-4px);
-            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.2);
-        }
-
-        .domain-info {
-            flex: 1;
-        }
-
-        .domain-name {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .domain-status {
-            font-size: 0.9rem;
-            color: var(--gray);
-        }
-
-        .domain-status.available {
-            color: #4CAF50;
-        }
-
-        .domain-status.taken {
-            color: var(--red);
-        }
-
-        .domain-price {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin: 0 2rem;
-            min-width: 100px;
-            text-align: right;
-        }
-
-        .domain-action {
-            padding: 0.875rem 1.5rem;
-            border: none;
-            border-radius: 12px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s;
-            font-family: 'Inter', sans-serif;
-            background: var(--orange);
-            color: var(--black);
-        }
-
-        .domain-action:hover {
-            transform: translateY(-2px);
-        }
-
-        .domain-action.offer {
-            background: transparent;
-            border: 1px solid var(--orange);
-            color: var(--orange);
-        }
-
-        .loading {
-            text-align: center;
-            padding: 2rem;
-            display: none;
-        }
-
-        .loading.active {
-            display: block;
-        }
-
-        .spinner {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            border: 4px solid var(--card-border);
-            border-top-color: var(--orange);
-            border-radius: 50%;
-            animation: spin 0.8s linear infinite;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
         }
 
         /* Features Grid */
@@ -424,47 +481,6 @@
             line-height: 1.8;
         }
 
-        /* How It Works */
-        .how-it-works {
-            padding: 6rem 2rem;
-            border-top: 1px solid var(--card-border);
-            border-bottom: 1px solid var(--card-border);
-        }
-
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
-        }
-
-        .step {
-            text-align: center;
-        }
-
-        .step-number {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--orange), var(--yellow));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--black);
-            margin: 0 auto 1rem;
-        }
-
-        .step h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .step p {
-            color: var(--light-gray);
-        }
-
         /* Pricing Section */
         .pricing {
             padding: 6rem 2rem;
@@ -473,40 +489,227 @@
 
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
 
         .pricing-card {
             background: var(--card);
-            border: 1px solid var(--card-border);
+            border: 2px solid var(--card-border);
             border-radius: 16px;
-            padding: 2rem;
+            padding: 2.5rem;
             text-align: center;
+            transition: all 0.3s;
+            position: relative;
         }
 
         .pricing-card:hover {
             border-color: var(--orange);
+            transform: translateY(-8px);
+            box-shadow: 0 16px 40px rgba(255, 107, 53, 0.2);
         }
 
-        .extension {
+        .pricing-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--orange), var(--yellow));
+            color: var(--black);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .plan-name {
             font-size: 1.8rem;
             font-weight: 700;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
 
         .price-tag {
-            font-size: 2rem;
-            font-weight: 700;
+            font-size: 3rem;
+            font-weight: 800;
             color: var(--orange);
-            margin: 1rem 0;
+            margin-bottom: 0.5rem;
         }
 
-        .price-note {
+        .price-period {
             color: var(--gray);
-            font-size: 0.9rem;
-            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-features {
+            text-align: left;
+            margin: 2rem 0;
+        }
+
+        .pricing-features li {
+            list-style: none;
+            padding: 0.75rem 0;
+            color: var(--light-gray);
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .pricing-features li:before {
+            content: "â ";
+            color: var(--orange);
+            font-weight: 700;
+            margin-right: 0.75rem;
+        }
+
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-cta {
+            width: 100%;
+            padding: 1.2rem;
+            background: var(--orange);
+            color: var(--black);
+            border: none;
+            border-radius: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s;
+            font-family: 'Inter', sans-serif;
+            margin-top: 2rem;
+        }
+
+        .pricing-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        .terms-note {
+            font-size: 0.8rem;
+            color: var(--gray);
+            margin-top: 1rem;
+        }
+
+        .terms-note a {
+            color: var(--orange);
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .terms-note a:hover {
+            text-decoration: underline;
+        }
+
+        /* Dashboard Links */
+        .dashboard {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.05), rgba(78, 205, 196, 0.05));
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .dashboard-card {
+            background: var(--card);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: var(--white);
+            transition: all 0.3s;
+        }
+
+        .dashboard-card:hover {
+            border-color: var(--orange);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.2);
+        }
+
+        .dashboard-title {
+            font-weight: 700;
+            color: var(--orange);
+            margin-bottom: 0.5rem;
+        }
+
+        .dashboard-price {
+            color: var(--light-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Referral Section */
+        .referral {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(78, 205, 196, 0.1));
+            text-align: center;
+            border-top: 1px solid var(--card-border);
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .referral h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .referral-subtitle {
+            color: var(--light-gray);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .referral-details {
+            background: var(--card);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            text-align: left;
+        }
+
+        .referral-details ul {
+            list-style: none;
+        }
+
+        .referral-details li {
+            margin-bottom: 1rem;
+            color: var(--light-gray);
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .referral-details li:before {
+            content: "â";
+            position: absolute;
+            left: 0;
+            color: var(--orange);
+            font-weight: 700;
+        }
+
+        .referral-cta {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--orange);
+            color: var(--black);
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+        }
+
+        .referral-cta:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
         }
 
         /* FAQ Section */
@@ -568,65 +771,70 @@
             transform: rotate(180deg);
         }
 
-        /* Referral Section */
-        .referral {
-            padding: 6rem 2rem;
-            background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(78, 205, 196, 0.1));
-            text-align: center;
-            border-top: 1px solid var(--card-border);
-            border-bottom: 1px solid var(--card-border);
+        /* Terms Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            overflow: auto;
         }
 
-        .referral h2 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
+        .modal.active {
+            display: block;
         }
 
-        .referral-subtitle {
-            color: var(--light-gray);
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .referral-details {
+        .modal-content {
             background: var(--card);
+            margin: 5% auto;
+            padding: 2rem;
             border: 1px solid var(--card-border);
             border-radius: 16px;
-            padding: 2rem;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-            text-align: left;
+            width: 90%;
+            max-width: 900px;
+            max-height: 80vh;
+            overflow-y: auto;
         }
 
-        .referral-details li {
-            margin-bottom: 1rem;
+        .modal-close {
             color: var(--light-gray);
-        }
-
-        .referral-cta {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: var(--orange);
-            color: var(--black);
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
+            float: right;
+            font-size: 2rem;
+            font-weight: bold;
             cursor: pointer;
-            border: none;
-            font-family: 'Inter', sans-serif;
+            transition: color 0.3s;
         }
 
-        .referral-cta:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+        .modal-close:hover {
+            color: var(--orange);
         }
 
-        /* Cross-Site Promotion */
+        .terms-section {
+            margin-bottom: 2rem;
+        }
+
+        .terms-section h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--orange);
+        }
+
+        .terms-section p, .terms-section li {
+            color: var(--light-gray);
+            line-height: 1.8;
+            margin-bottom: 0.75rem;
+        }
+
+        .terms-section ul, .terms-section ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Network Section */
         .network {
             padding: 6rem 2rem;
         }
@@ -696,6 +904,7 @@
             cursor: pointer;
             border: none;
             font-family: 'Inter', sans-serif;
+            font-size: 1rem;
         }
 
         .cta-banner-btn:hover {
@@ -737,6 +946,7 @@
             color: var(--light-gray);
             text-decoration: none;
             transition: color 0.3s;
+            cursor: pointer;
         }
 
         .footer-col a:hover {
@@ -755,93 +965,6 @@
             border-top: 1px solid var(--card-border);
             color: var(--gray);
             font-size: 0.9rem;
-        }
-
-        /* Cart */
-        .cart-badge {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            background: var(--orange);
-            color: var(--black);
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s;
-            z-index: 500;
-            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
-        }
-
-        .cart-badge:hover {
-            transform: scale(1.1);
-        }
-
-        .cart-badge.hidden {
-            display: none;
-        }
-
-        .cart-dropdown {
-            position: fixed;
-            bottom: 5rem;
-            right: 2rem;
-            background: var(--card);
-            border: 1px solid var(--card-border);
-            border-radius: 16px;
-            padding: 1.5rem;
-            width: 300px;
-            max-height: 400px;
-            overflow-y: auto;
-            display: none;
-            z-index: 500;
-            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
-        }
-
-        .cart-dropdown.active {
-            display: block;
-        }
-
-        .cart-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid var(--card-border);
-        }
-
-        .cart-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        .cart-total {
-            font-weight: 700;
-            font-size: 1.2rem;
-            margin: 1rem 0;
-            text-align: right;
-        }
-
-        .checkout-btn {
-            width: 100%;
-            padding: 1rem;
-            background: var(--orange);
-            color: var(--black);
-            border: none;
-            border-radius: 12px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .checkout-btn:hover {
-            transform: translateY(-2px);
         }
 
         /* Responsive */
@@ -863,19 +986,9 @@
                 font-size: 1.8rem;
             }
 
-            .search-bar-wrapper {
-                flex-direction: column;
-            }
-
-            .domain-result {
-                flex-direction: column;
-                gap: 1rem;
-                align-items: flex-start;
-            }
-
-            .domain-price {
-                margin: 0;
-                text-align: left;
+            .chat-container {
+                padding: 1.5rem;
+                margin: 1rem;
             }
 
             .social-proof {
@@ -883,10 +996,10 @@
             }
 
             .features,
-            .how-it-works,
             .pricing,
-            .faq,
+            .dashboard,
             .referral,
+            .faq,
             .network {
                 padding: 3rem 1rem;
             }
@@ -899,18 +1012,15 @@
                 grid-template-columns: 1fr;
             }
 
-            .cart-dropdown {
-                width: calc(100% - 2rem);
-                right: 1rem;
+            .pricing-grid {
+                grid-template-columns: 1fr;
             }
-        }
 
-        /* Porkbun Attribution */
-        .porkbun-note {
-            text-align: center;
-            color: var(--gray);
-            font-size: 0.85rem;
-            margin-top: 1rem;
+            .modal-content {
+                width: 95%;
+                margin: 20% auto;
+                max-height: 60vh;
+            }
         }
     </style>
 </head>
@@ -926,9 +1036,9 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#features">Features</a></li>
                 <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#login" style="margin-left: 1rem; opacity: 0.7;">Login</a></li>
-                <li><button class="nav-cta" onclick="document.getElementById('hero-search').focus()">Search Domains</button></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="dashboard.html" style="opacity: 0.7;">Dashboard</a></li>
+                <li><button class="nav-cta" onclick="scrollToChat()">Start Now</button></li>
             </ul>
         </div>
     </nav>
@@ -936,41 +1046,57 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Find Your Perfect Domain — <span class="gradient-text">Powered by AI</span></h1>
-            <p class="hero-subtitle">AI-powered domain search with intelligent suggestions. Register instantly via Porkbun integration.</p>
+            <h1>Your AI Domain + <span class="gradient-text">Hosting Stack</span></h1>
+            <p class="hero-subtitle">Complete domain registration and hosting infrastructure for AI-ready businesses. $17.99/month includes AI-selected domain, Cloudflare hosting, SSL certificate, and 99.9% uptime guarantee.</p>
 
-            <div class="search-bar-wrapper">
-                <input type="text" id="hero-search" class="search-input" placeholder="e.g., myawesomestartup.com">
-                <button class="search-btn" onclick="performSearch()">Search</button>
+            <!-- AI Chat Agent -->
+            <div class="chat-container">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="chat-message message-ai">
+                        <div class="message-bubble">Hi! Let's find your perfect domain. What type of business or project are you building?</div>
+                    </div>
+                </div>
+                <div class="chat-input-wrapper">
+                    <input type="text" id="chatInput" class="chat-input" placeholder="Type your answer..." onkeypress="handleChatInput(event)">
+                    <button class="chat-send-btn" onclick="sendChatMessage()">Send</button>
+                </div>
             </div>
 
-            <div class="porkbun-note">Domains powered by Porkbun</div>
+            <!-- Domain Selection Grid (hidden initially) -->
+            <div class="domain-grid" id="domainGrid">
+                <div style="grid-column: 1 / -1; text-align: center; margin-bottom: 2rem;">
+                    <h2 style="font-size: 2rem; margin-bottom: 1rem;">Perfect Domains for Your Business</h2>
+                    <p style="color: var(--light-gray);">Select one to claim your domain today. Only $12 per domain, then $17.99/month for complete hosting infrastructure.</p>
+                </div>
+                <div class="domain-grid-container" id="domainContainer"></div>
+            </div>
+
+            <!-- Scanning Animation (hidden initially) -->
+            <div class="scanning-animation" id="scanningAnimation" style="display: none;">
+                <p style="margin-bottom: 2rem; font-size: 1.1rem;">Scanning available domains</p>
+                <div class="scanning-dots">
+                    <div class="scanning-dot"></div>
+                    <div class="scanning-dot"></div>
+                    <div class="scanning-dot"></div>
+                </div>
+            </div>
 
             <div class="social-proof">
                 <div class="proof-item">
-                    <div class="proof-number">2.8K+</div>
-                    <div class="proof-label">Domains Registered</div>
+                    <div class="proof-number">3.2K+</div>
+                    <div class="proof-label">Domains Active</div>
                 </div>
                 <div class="proof-item">
-                    <div class="proof-number">4.8★</div>
-                    <div class="proof-label">Average Rating</div>
+                    <div class="proof-number">4.9â</div>
+                    <div class="proof-label">Customer Rating</div>
                 </div>
                 <div class="proof-item">
-                    <div class="proof-number">47K+</div>
-                    <div class="proof-label">Happy Users</div>
+                    <div class="proof-number">99.9%</div>
+                    <div class="proof-label">Uptime Guarantee</div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Loading Indicator -->
-    <div class="loading" id="loading">
-        <div class="spinner"></div>
-        <p style="margin-top: 1rem; color: var(--gray);">Searching domains...</p>
-    </div>
-
-    <!-- Domain Search Results -->
-    <div class="search-results" id="searchResults" style="padding: 0 2rem; margin-bottom: 3rem;"></div>
 
     <!-- Features Section -->
     <section class="features" id="features">
@@ -978,43 +1104,34 @@
             <h2 class="section-title">Why URL SuperHero?</h2>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">🤖</div>
-                    <h3>AI Domain Suggestions</h3>
-                    <p>Our AI analyzes your brand and recommends available domains that perfectly match your vision.</p>
+                    <div class="feature-icon">ð¤</div>
+                    <h3>AI Domain Selection</h3>
+                    <p>Our AI analyzes your business and recommends the perfect available .com domains that match your vision and brand.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Instant Registration</h3>
-                    <p>Register domains in seconds with our Porkbun-powered system. No delays, no complications.</p>
+                    <div class="feature-icon">âï¸</div>
+                    <h3>Cloudflare Hosting</h3>
+                    <p>Enterprise-grade hosting infrastructure with AI-optimized DNS configuration, automatic SSL certificates, and DDoS protection.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🎛️</div>
-                    <h3>Domain Management</h3>
-                    <p>Manage DNS records, transfers, renewals, and more from your unified dashboard.</p>
+                    <div class="feature-icon">ð</div>
+                    <h3>SSL & Security</h3>
+                    <p>Free SSL certificate included. All domains registered with auto-renewal and WHOIS privacy protection.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works -->
-    <section class="how-it-works">
-        <div class="section-container">
-            <h2 class="section-title">How It Works</h2>
-            <div class="steps-grid">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Search</h3>
-                    <p>Enter your desired domain name and let our system check availability across all extensions.</p>
+                <div class="feature-card">
+                    <div class="feature-icon">â¡</div>
+                    <h3>Instant Setup</h3>
+                    <p>Register your domain and launch hosting in minutes. Your DNS is configured automatically with AI-optimized settings.</p>
                 </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Select</h3>
-                    <p>Choose from available domains and add them to your cart with just one click.</p>
+                <div class="feature-card">
+                    <div class="feature-icon">ð</div>
+                    <h3>Full Dashboard</h3>
+                    <p>Manage everything from one intuitive dashboard. Monitor uptime, DNS records, and connect to other SuperHero services.</p>
                 </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Own</h3>
-                    <p>Complete checkout with Stripe and your domains are registered instantly via Porkbun.</p>
+                <div class="feature-card">
+                    <div class="feature-icon">ð¤</div>
+                    <h3>Priority Support</h3>
+                    <p>24/7 support team ready to help. From domain transfers to DNS setup, we've got you covered.</p>
                 </div>
             </div>
         </div>
@@ -1023,178 +1140,171 @@
     <!-- Pricing Section -->
     <section class="pricing" id="pricing">
         <div class="section-container">
-            <h2 class="section-title">Domain Pricing</h2>
-            <p style="text-align: center; color: var(--light-gray); margin-bottom: 2rem;">Standard annual renewal rates. Premium domains priced individually.</p>
+            <h2 class="section-title">Simple, Transparent Pricing</h2>
             <div class="pricing-grid">
                 <div class="pricing-card">
-                    <div class="extension">.com</div>
-                    <div class="price-tag">$9.99</div>
-                    <p class="price-note">Most popular</p>
-                    <button class="nav-cta" onclick="document.getElementById('hero-search').value = '.com'; document.getElementById('hero-search').focus();">Search .com</button>
-                </div>
-                <div class="pricing-card">
-                    <div class="extension">.net</div>
-                    <div class="price-tag">$11.79</div>
-                    <p class="price-note">Business friendly</p>
-                    <button class="nav-cta" onclick="document.getElementById('hero-search').value = '.net'; document.getElementById('hero-search').focus();">Search .net</button>
-                </div>
-                <div class="pricing-card">
-                    <div class="extension">.io</div>
-                    <div class="price-tag">$29.99</div>
-                    <p class="price-note">Tech startup choice</p>
-                    <button class="nav-cta" onclick="document.getElementById('hero-search').value = '.io'; document.getElementById('hero-search').focus();">Search .io</button>
-                </div>
-                <div class="pricing-card">
-                    <div class="extension">.ai</div>
-                    <div class="price-tag">$49.99</div>
-                    <p class="price-note">AI-focused brands</p>
-                    <button class="nav-cta" onclick="document.getElementById('hero-search').value = '.ai'; document.getElementById('hero-search').focus();">Search .ai</button>
-                </div>
-                <div class="pricing-card">
-                    <div class="extension">.org</div>
-                    <div class="price-tag">$12.99</div>
-                    <p class="price-note">Non-profits</p>
-                    <button class="nav-cta" onclick="document.getElementById('hero-search').value = '.org'; document.getElementById('hero-search').focus();">Search .org</button>
-                </div>
-                <div class="pricing-card">
-                    <div class="extension">Premium</div>
-                    <div class="price-tag">Custom</div>
-                    <p class="price-note">On request</p>
-                    <button class="nav-cta" onclick="alert('Contact support for premium domains.')">Inquire</button>
+                    <div class="pricing-badge">COMPLETE STACK</div>
+                    <div class="plan-name">AI Domain + Hosting</div>
+                    <div class="price-tag">$17.99</div>
+                    <div class="price-period">per month, all-inclusive</div>
+
+                    <ul class="pricing-features">
+                        <li>AI-selected .com domain registration</li>
+                        <li>Cloudflare-powered hosting infrastructure</li>
+                        <li>AI-optimized DNS configuration</li>
+                        <li>SSL certificate (auto-renewing)</li>
+                        <li>99.9% uptime guarantee</li>
+                        <li>AI business infrastructure setup</li>
+                        <li>Priority support</li>
+                        <li>Domain management dashboard</li>
+                    </ul>
+
+                    <button class="pricing-cta" onclick="checkout('urlsuperhero.com')">Get Started Now</button>
+                    <div class="terms-note">By subscribing, you agree to our <a onclick="openTerms()">Terms of Service</a> including the 90-day minimum commitment.</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="faq">
+    <!-- Dashboard / Connected Services -->
+    <section class="dashboard" id="dashboard">
         <div class="section-container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <span>Do you offer a free trial?</span>
-                        <div class="faq-toggle">▼</div>
-                    </div>
-                    <div class="faq-answer">We don't offer free trials. However, all paid subscribers receive 1 month of free Replit access as a subscriber bonus.</div>
-                </div>
+            <h2 class="section-title">Complete Your AI Business Stack</h2>
+            <p style="text-align: center; color: var(--light-gray); margin-bottom: 2rem; font-size: 1.1rem;">After you purchase URL SuperHero, access your dashboard to integrate other SuperHero services.</p>
 
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <span>How does the referral program work?</span>
-                        <div class="faq-toggle">▼</div>
-                    </div>
-                    <div class="faq-answer">Earn 80% commission on the first payment from each customer you refer. This is a one-time commission per referral. You can refer unlimited customers and earn from each first payment. Share your unique referral link to get started.</div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <span>How quickly can I register a domain?</span>
-                        <div class="faq-toggle">▼</div>
-                    </div>
-                    <div class="faq-answer">Once you complete checkout, your domain is registered instantly through our Porkbun integration. You'll have immediate access to your domain management dashboard.</div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <span>Can I transfer domains from another registrar?</span>
-                        <div class="faq-toggle">▼</div>
-                    </div>
-                    <div class="faq-answer">Yes! We support domain transfers from any registrar. The process typically takes 5-7 days. Our support team will guide you through each step.</div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <span>What payment methods do you accept?</span>
-                        <div class="faq-toggle">▼</div>
-                    </div>
-                    <div class="faq-answer">We accept all major credit cards (Visa, Mastercard, American Express) and payment through Stripe, which supports many alternative payment methods.</div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <span>Is DNS management included?</span>
-                        <div class="faq-toggle">▼</div>
-                    </div>
-                    <div class="faq-answer">Yes! Full DNS management is included with every domain. Point your domain to your website, email provider, or any service you use.</div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <span>Do you offer domain privacy protection?</span>
-                        <div class="faq-toggle">▼</div>
-                    </div>
-                    <div class="faq-answer">Yes, WHOIS privacy is available for most domain extensions at a small additional cost. This keeps your personal information private from public WHOIS lookups.</div>
-                </div>
+            <div class="dashboard-grid">
+                <a href="https://resumesuperhero.com" class="dashboard-card" target="_blank">
+                    <div class="dashboard-title">Resume SuperHero</div>
+                    <div class="dashboard-price">$9.99/month</div>
+                </a>
+                <a href="https://seoaisuperhero.com" class="dashboard-card" target="_blank">
+                    <div class="dashboard-title">SEO AI SuperHero</div>
+                    <div class="dashboard-price">$19.99/month</div>
+                </a>
+                <a href="https://mcpsuperhero.com" class="dashboard-card" target="_blank">
+                    <div class="dashboard-title">MCP SuperHero</div>
+                    <div class="dashboard-price">Custom pricing</div>
+                </a>
+                <a href="https://shopifysuperhero.com" class="dashboard-card" target="_blank">
+                    <div class="dashboard-title">Shopify SuperHero</div>
+                    <div class="dashboard-price">Custom pricing</div>
+                </a>
+                <a href="https://startbizsuperhero.com" class="dashboard-card" target="_blank">
+                    <div class="dashboard-title">StartBiz SuperHero</div>
+                    <div class="dashboard-price">Custom pricing</div>
+                </a>
+                <a href="https://replitsuperhero.com" class="dashboard-card" target="_blank">
+                    <div class="dashboard-title">Replit SuperHero</div>
+                    <div class="dashboard-price">Custom pricing</div>
+                </a>
+                <a href="https://claudsuperhero.com" class="dashboard-card" target="_blank">
+                    <div class="dashboard-title">Claud SuperHero</div>
+                    <div class="dashboard-price">Custom pricing</div>
+                </a>
+                <a href="https://agenticsuperhero.com" class="dashboard-card" target="_blank">
+                    <div class="dashboard-title">Agentic SuperHero</div>
+                    <div class="dashboard-price">Custom pricing</div>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Referral Section -->
-    <section class="referral">
-        <h2>Earn 80% Commission</h2>
-        <p class="referral-subtitle">Share your unique referral link and earn generous commissions on every customer's first payment.</p>
+    <section class="referral" id="referral">
+        <h2>Earn 80% Commission â Ai-Ai Referral Program</h2>
+        <p class="referral-subtitle">Share your referral link and earn generous commissions on every customer's first payment. No approval process, instant setup.</p>
 
         <div class="referral-details">
             <ul>
-                <li>✓ 80% commission on first payment (one-time per referral)</li>
-                <li>✓ Unlimited referrals — no cap on earnings</li>
-                <li>✓ Real-time referral tracking dashboard</li>
-                <li>✓ Weekly payouts via Stripe Connect</li>
-                <li>✓ Marketing materials and assets provided</li>
+                <li>80% commission on first payment (one-time per referral)</li>
+                <li>$14.39 earned per referral ($17.99 Ã 80%)</li>
+                <li>Unlimited referrals â no cap on earnings</li>
+                <li>No approval process â instant setup</li>
+                <li>Real-time tracking dashboard</li>
+                <li>Weekly payouts via Stripe Connect</li>
+                <li>Marketing materials provided</li>
             </ul>
         </div>
 
-        <button class="referral-cta" onclick="alert('Referral program signup coming soon. Join our waitlist!')">Get Your Referral Link</button>
+        <button class="referral-cta" onclick="referralSignup()">Join Ai-Ai Referral Program</button>
     </section>
 
-    <!-- Cross-Site Promotion -->
-    <section class="network">
-        <h2>Part of the SuperHero Network</h2>
-        <div class="network-grid">
-            <a href="https://theaisuperheroes.com" class="network-link" target="_blank">
-                <strong>TheAISuperHeroes.com</strong>
-                <span>AI Business Hub</span>
-            </a>
-            <a href="https://mcpsuperhero.com" class="network-link" target="_blank">
-                <strong>MCPSuperHero.com</strong>
-                <span>AI Connections</span>
-            </a>
-            <a href="https://seoaisuperhero.com" class="network-link" target="_blank">
-                <strong>SEOAISuperHero.com</strong>
-                <span>AI SEO</span>
-            </a>
-            <a href="https://shopifysuperhero.com" class="network-link" target="_blank">
-                <strong>ShopifySuperHero.com</strong>
-                <span>E-commerce AI</span>
-            </a>
-            <a href="https://startbizsuperhero.com" class="network-link" target="_blank">
-                <strong>StartBizSuperHero.com</strong>
-                <span>Website Builder</span>
-            </a>
-            <a href="https://resumesuperhero.com" class="network-link" target="_blank">
-                <strong>ResumeSuperHero.com</strong>
-                <span>Career AI</span>
-            </a>
-            <a href="https://replitsuperhero.com" class="network-link" target="_blank">
-                <strong>ReplitSuperHero.com</strong>
-                <span>Code Platform Deals</span>
-            </a>
-            <a href="https://claudsuperhero.com" class="network-link" target="_blank">
-                <strong>ClaudSuperHero.com</strong>
-                <span>Claude AI Deals</span>
-            </a>
-            <a href="https://agenticsuperhero.com" class="network-link" target="_blank">
-                <strong>AgenticSuperHero.com</strong>
-                <span>Agentic AI Deals</span>
-            </a>
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="section-container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>What's included in the $17.99/month plan?</span>
+                        <div class="faq-toggle">â¼</div>
+                    </div>
+                    <div class="faq-answer">Your subscription includes a .com domain registration, Cloudflare-powered hosting infrastructure with AI-optimized DNS configuration, an auto-renewing SSL certificate, 99.9% uptime guarantee, AI business infrastructure setup, and priority 24/7 support. Everything you need to get your business online.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>How does the AI domain selection work?</span>
+                        <div class="faq-toggle">â¼</div>
+                    </div>
+                    <div class="faq-answer">Our AI analyzes your business type, unique value proposition, keywords, and target audience to recommend 10 available .com domains that best match your brand. You simply pick the one you love, and we handle the rest. The AI considers memorability, brand fit, and SEO potential.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>What's the 90-day minimum commitment?</span>
+                        <div class="faq-toggle">â¼</div>
+                    </div>
+                    <div class="faq-answer">When you register a domain with URL SuperHero, it's held with us for a minimum of 90 days of paid service. This ensures we maintain your infrastructure and support. After 90 days, if you wish to transfer your domain elsewhere, you're free to do so. If payment is missed, the domain is locked for a full year until at least 90 days of payments are made.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>How does the referral program work?</span>
+                        <div class="faq-toggle">â¼</div>
+                    </div>
+                    <div class="faq-answer">Join the Ai-Ai Referral Program for free with instant setup. Share your unique referral link. When someone signs up through your link, you earn 80% commission ($14.39) on their first payment. This is a one-time commission per referral, not recurring. You can refer unlimited customers. Payouts happen weekly via Stripe Connect.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>What hosting infrastructure do you use?</span>
+                        <div class="faq-toggle">â¼</div>
+                    </div>
+                    <div class="faq-answer">We use Cloudflare's enterprise-grade global hosting infrastructure. This includes automatic SSL certificates, DDoS protection, content delivery networks in 200+ cities worldwide, and AI-optimized DNS configuration. Your site is fast, secure, and reliable no matter where your visitors are.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Can I transfer my domain elsewhere?</span>
+                        <div class="faq-toggle">â¼</div>
+                    </div>
+                    <div class="faq-answer">Yes. After completing 90 days of paid service, you can transfer your domain to any registrar. We'll provide all the necessary authorization codes and support. However, we think you'll love our platform so much you'll want to stay.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>What payment methods do you accept?</span>
+                        <div class="faq-toggle">â¼</div>
+                    </div>
+                    <div class="faq-answer">We accept all major credit cards (Visa, Mastercard, American Express) through Stripe. Stripe also supports many alternative payment methods including Apple Pay, Google Pay, and bank transfers in many countries.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Is there a refund policy?</span>
+                        <div class="faq-toggle">â¼</div>
+                    </div>
+                    <div class="faq-answer">Domain registrations are non-refundable as per ICANN regulations. However, if you cancel your service before the first 90 days are complete, the domain remains registered with you but loses our hosting infrastructure. Monthly hosting subscription can be cancelled anytime after the 90-day commitment period.</div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- CTA Banner -->
     <section class="cta-banner">
-        <h2>Find Your Domain Today</h2>
-        <button class="cta-banner-btn" onclick="document.getElementById('hero-search').focus(); window.scrollTo({top: 0, behavior: 'smooth'})">Start Searching</button>
+        <h2>Launch Your AI Business Today</h2>
+        <button class="cta-banner-btn" onclick="scrollToChat()">Start Your Domain Search</button>
     </section>
 
     <!-- Footer -->
@@ -1202,215 +1312,292 @@
         <div class="footer-container">
             <div class="footer-col footer-brand">
                 <h4>URL SuperHero</h4>
-                <p>The AI-powered domain marketplace. Find, register, and manage your perfect domain in seconds.</p>
+                <p>AI-powered domain registration and hosting infrastructure built for AI-ready businesses. Complete your digital identity in minutes.</p>
             </div>
             <div class="footer-col">
-                <h4>Products</h4>
+                <h4>Product</h4>
                 <ul>
-                    <li><a href="https://theaisuperheroes.com">TheAISuperHeroes.com</a></li>
-                    <li><a href="https://mcpsuperhero.com">MCPSuperHero.com</a></li>
-                    <li><a href="https://seoaisuperhero.com">SEOAISuperHero.com</a></li>
-                    <li><a href="https://shopifysuperhero.com">ShopifySuperHero.com</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#referral">Referral Program</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Resources</h4>
+                <h4>Network</h4>
                 <ul>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#support">Support</a></li>
-                    <li><a href="#api">API Docs</a></li>
-                    <li><a href="#status">Status Page</a></li>
+                    <li><a href="https://theaisuperheroes.com" target="_blank">TheAISuperHeroes.com</a></li>
+                    <li><a href="https://resumesuperhero.com" target="_blank">ResumeSuperHero.com</a></li>
+                    <li><a href="https://mcpsuperhero.com" target="_blank">MCPSuperHero.com</a></li>
+                    <li><a href="https://seoaisuperhero.com" target="_blank">SEOAISuperHero.com</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h4>Legal</h4>
                 <ul>
-                    <li><a href="#privacy">Privacy Policy</a></li>
-                    <li><a href="#terms">Terms of Service</a></li>
-                    <li><a href="#cookies">Cookie Policy</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#" onclick="openTerms()">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">Contact Support</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 URL SuperHero. All rights reserved. Domains powered by Porkbun.</p>
+            <p>&copy; 2026 URL SuperHero. All rights reserved. | Built on advanced infrastructure for AI-ready businesses.</p>
         </div>
     </footer>
 
-    <!-- Cart Badge -->
-    <div class="cart-badge" id="cartBadge" onclick="toggleCart()">
-        <span id="cartCount">0</span>
-    </div>
+    <!-- Terms & Conditions Modal -->
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeTerms()">&times;</span>
+            <h2>Terms of Service & Subscription Agreement</h2>
 
-    <!-- Cart Dropdown -->
-    <div class="cart-dropdown" id="cartDropdown">
-        <h3 style="margin-bottom: 1rem;">Shopping Cart</h3>
-        <div id="cartItems"></div>
-        <div class="cart-total">Total: $<span id="cartTotal">0.00</span></div>
-        <button class="checkout-btn" onclick="checkout()">Checkout</button>
-    </div>
+            <div class="terms-section">
+                <h3>1. Service Description</h3>
+                <p>URL SuperHero provides AI-powered domain registration and hosting infrastructure services. Our service includes domain name registration, Cloudflare-powered hosting, SSL certificates, DNS management, and 24/7 support. All services are provided on a monthly subscription basis at $17.99 USD per month.</p>
+            </div>
 
-    <!-- Referral Tracking Script -->
-    <script src="https://cdn.example.com/referral-tracking.js" async></script>
+            <div class="terms-section">
+                <h3>2. Minimum Service Commitment</h3>
+                <p>All customers agree to a 90-day minimum service commitment. During this period, you may not transfer your domain to another registrar. Your domain remains held with URL SuperHero for the duration of your active subscription and the 90-day commitment period.</p>
+            </div>
+
+            <div class="terms-section">
+                <h3>3. Domain Registration Policy</h3>
+                <p>When you register a domain through URL SuperHero, the domain is registered with our infrastructure and cannot be transferred out for a minimum of 90 days from the start of your subscription. This policy ensures we maintain your domain registration and provide continuous hosting services.</p>
+            </div>
+
+            <div class="terms-section">
+                <h3>4. Payment and Billing</h3>
+                <p>Your subscription will be charged monthly at $17.99 USD. Billing occurs on the same day each month. If a payment is missed or declined, your account status changes to delinquent. All prices are subject to applicable taxes where required by law.</p>
+            </div>
+
+            <div class="terms-section">
+                <h3>5. Delinquency and Account Locks</h3>
+                <p>If you fail to make a payment or your payment is declined, your domain enters a locked state. The domain will remain locked with URL SuperHero for a full one (1) year or until at least 90 days of back payments have been received and processed, whichever comes first. During this lock period, the domain cannot be transferred to another registrar.</p>
+            </div>
+
+            <div class="terms-section">
+                <h3>6. Domain Transfer Policy</h3>
+                <p>After successfully maintaining at least 90 days of paid service and your subscription is in good standing, you may request to transfer your domain to another registrar. URL SuperHero will provide all necessary authorization codes and documentation to facilitate the transfer. Transfer requests must be made through your dashboard or support team.</p>
+            </div>
+
+            <div class="terms-section">
+                <h3>7. Refund Policy</h3>
+                <p>Domain registrations are non-refundable per ICANN regulations. Monthly hosting subscription fees are non-refundable after payment is processed. If you cancel your service before the 90-day minimum commitment is complete, your domain remains registered but hosting services are terminated. No partial refunds are provided for unused portions of any month.</p>
+            </div>
+
+            <div class="terms-section">
+                <h3>8. Intellectual Property</h3>
+                <p>URL SuperHero does not claim ownership of your domain name. You maintain full ownership of your registered domain. However, we maintain administrative control of the domain registry entry during your subscription to ensure proper DNS management and hosting services.</p>
+            </div>
+
+            <div class="terms-section">
+                <h3>9. Service Level Agreement</h3>
+                <p>URL SuperHero guarantees 99.9% uptime for hosting services powered by Cloudflare infrastructure. This excludes scheduled maintenance windows (announced 7 days in advance) and issues caused by customer misconfigurations. Uptime is measured monthly and excludes the first day of service.</p>
+            </div>
+
+            <div class="terms-section">
+                <h3>10. Acceptable Use Policy</h3>
+                <p>You agree not to use URL SuperHero's services for illegal activities, spam, phishing, malware distribution, or any content that violates applicable laws. URL SuperHero reserves the right to suspend or terminate service for violations of this policy without refund.</p>
+            </div>
+
+            <div class="terms-section">
+                <h3>11. Limitation of Liability</h3>
+                <p>URL SuperHero's total liability for any claims arising from this agreement shall not exceed the amount you paid for services in the 12 months preceding the claim. This limitation applies to all causes of action regardless of legal theory.</p>
+            </div>
+
+            <div class="terms-section">
+                <h3>12. Termination</h3>
+                <p>You may cancel your subscription at any time through your dashboard. Cancellation takes effect at the end of your current billing cycle. URL SuperHero reserves the right to terminate service for terms violations or non-payment after 30 days of delinquency.</p>
+            </div>
+
+            <div class="terms-section">
+                <h3>13. Price Changes</h3>
+                <p>URL SuperHero reserves the right to change subscription pricing with 30 days written notice. Price increases will apply to new billing cycles only. If you do not accept the new pricing, you may cancel within the notice period.</p>
+            </div>
+
+            <div class="terms-section">
+                <h3>14. Data and Privacy</h3>
+                <p>Your domain registration data will be stored securely according to ICANN standards. WHOIS privacy protection is available for an additional fee. Please review our Privacy Policy for details on how your personal information is handled.</p>
+            </div>
+
+            <div class="terms-section">
+                <h3>15. Governing Law</h3>
+                <p>These terms are governed by the laws of Delaware, United States. Any disputes shall be resolved through binding arbitration in accordance with American Arbitration Association rules.</p>
+            </div>
+
+            <div class="terms-section">
+                <h3>16. Contact Information</h3>
+                <p>For questions about these terms or to contact support: Email us at support@urlsuperhero.com or visit our dashboard support center.</p>
+            </div>
+        </div>
+    </div>
 
     <!-- Main JavaScript -->
     <script>
-        // Cart management
-        let cart = JSON.parse(localStorage.getItem('domainCart')) || [];
+        // Chat state
+        let chatStep = 0;
+        let userResponses = {
+            business: '',
+            unique: '',
+            keywords: '',
+            audience: ''
+        };
 
-        function updateCartUI() {
-            const count = cart.length;
-            document.getElementById('cartCount').textContent = count;
+        const chatQuestions = [
+            'What type of business or project are you building?',
+            'What makes it unique? (What\'s your competitive advantage?)',
+            'Any preferred keywords you\'d like in your domain?',
+            'Who is your target audience?'
+        ];
 
-            if (count === 0) {
-                document.getElementById('cartBadge').classList.add('hidden');
-            } else {
-                document.getElementById('cartBadge').classList.remove('hidden');
+        function handleChatInput(event) {
+            if (event.key === 'Enter') {
+                sendChatMessage();
             }
-
-            // Update cart dropdown
-            const cartItemsDiv = document.getElementById('cartItems');
-            cartItemsDiv.innerHTML = '';
-            let total = 0;
-
-            cart.forEach((item, index) => {
-                const itemEl = document.createElement('div');
-                itemEl.className = 'cart-item';
-                itemEl.innerHTML = `
-                    <div>
-                        <strong>${item.name}</strong>
-                        <div style="color: var(--gray); font-size: 0.85rem;">$${item.price.toFixed(2)}</div>
-                    </div>
-                    <button onclick="removeFromCart(${index})" style="background: none; border: none; color: var(--red); cursor: pointer; font-weight: 600;">Remove</button>
-                `;
-                cartItemsDiv.appendChild(itemEl);
-                total += item.price;
-            });
-
-            document.getElementById('cartTotal').textContent = total.toFixed(2);
         }
 
-        function addToCart(domain, price) {
-            cart.push({ name: domain, price: parseFloat(price) });
-            localStorage.setItem('domainCart', JSON.stringify(cart));
-            updateCartUI();
+        function sendChatMessage() {
+            const input = document.getElementById('chatInput');
+            const message = input.value.trim();
 
-            // Show confirmation
-            const btn = event.target;
-            const originalText = btn.textContent;
-            btn.textContent = 'Added!';
+            if (!message) return;
+
+            // Add user message
+            addChatMessage(message, 'user');
+            input.value = '';
+
+            // Process response
+            processChat(message);
+        }
+
+        function addChatMessage(text, sender) {
+            const messagesDiv = document.getElementById('chatMessages');
+            const messageEl = document.createElement('div');
+            messageEl.className = `chat-message ${sender === 'user' ? 'message-user' : 'message-ai'}`;
+
+            const bubble = document.createElement('div');
+            bubble.className = 'message-bubble';
+            bubble.textContent = text;
+
+            messageEl.appendChild(bubble);
+            messagesDiv.appendChild(messageEl);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+
+        function processChat(response) {
+            const responses = ['business', 'unique', 'keywords', 'audience'];
+
+            if (chatStep < chatQuestions.length) {
+                userResponses[responses[chatStep]] = response;
+                chatStep++;
+
+                if (chatStep < chatQuestions.length) {
+                    setTimeout(() => {
+                        addChatMessage(chatQuestions[chatStep], 'ai');
+                    }, 600);
+                } else {
+                    // Chat complete, show scanning then domains
+                    setTimeout(() => {
+                        addChatMessage('Perfect! Let me scan for the best available domains for you...', 'ai');
+                        showScanning();
+                    }, 600);
+                }
+            }
+        }
+
+        function showScanning() {
+            document.getElementById('chatMessages').style.display = 'none';
+            document.getElementById('chatInput').style.display = 'none';
+            document.querySelector('.chat-send-btn').style.display = 'none';
+            document.getElementById('scanningAnimation').style.display = 'block';
+
             setTimeout(() => {
-                btn.textContent = originalText;
-            }, 2000);
+                document.getElementById('scanningAnimation').style.display = 'none';
+                document.getElementById('chatMessages').style.display = 'flex';
+                addChatMessage('Great news! I found 10 perfect domains for your business. Pick your favorite!', 'ai');
+                showDomainResults();
+            }, 2500);
         }
 
-        function removeFromCart(index) {
-            cart.splice(index, 1);
-            localStorage.setItem('domainCart', JSON.stringify(cart));
-            updateCartUI();
-        }
+        function showDomainResults() {
+            const baseNames = [
+                'aiventure',
+                'nexbiz',
+                'luminai',
+                'velocitech',
+                'primestack',
+                'quantumhub',
+                'synthera',
+                'innovix',
+                'mindforge',
+                'cloudpulse'
+            ];
 
-        function toggleCart() {
-            document.getElementById('cartDropdown').classList.toggle('active');
-        }
+            const container = document.getElementById('domainContainer');
+            container.innerHTML = '';
 
-        function checkout() {
-            if (cart.length === 0) {
-                alert('Your cart is empty.');
-                return;
-            }
-
-            // Redirect to Stripe checkout (placeholder)
-            const domainsList = cart.map(item => item.name).join(',');
-            window.location.href = `https://checkout.stripe.com/pay?domains=${encodeURIComponent(domainsList)}`;
-        }
-
-        // Domain search
-        function performSearch() {
-            const searchInput = document.getElementById('hero-search').value.trim();
-            if (!searchInput) {
-                alert('Please enter a domain to search.');
-                return;
-            }
-
-            // Show loading
-            document.getElementById('loading').classList.add('active');
-            document.getElementById('searchResults').classList.remove('active');
-
-            // Simulate API call
-            setTimeout(() => {
-                const results = generateMockResults(searchInput);
-                displayResults(results);
-            }, 1500);
-        }
-
-        function generateMockResults(baseName) {
-            // Remove any extension already included
-            const cleanName = baseName.replace(/\.(com|net|org|io|ai)$/, '').toLowerCase();
-
-            const extensions = ['com', 'net', 'org', 'io', 'ai'];
-            const prices = {
-                'com': 9.99,
-                'net': 11.79,
-                'org': 12.99,
-                'io': 29.99,
-                'ai': 49.99
-            };
-
-            return extensions.map(ext => {
-                const fullDomain = `${cleanName}.${ext}`;
-                // Randomly determine availability
-                const available = Math.random() > 0.4;
-
-                return {
-                    domain: fullDomain,
-                    ext: ext,
-                    available: available,
-                    price: prices[ext]
-                };
-            });
-        }
-
-        function displayResults(results) {
-            document.getElementById('loading').classList.remove('active');
-
-            const resultsDiv = document.getElementById('searchResults');
-            resultsDiv.innerHTML = '';
-
-            results.forEach(result => {
-                const resultEl = document.createElement('div');
-                resultEl.className = 'domain-result';
-
-                const status = result.available ?
-                    '<span class="domain-status available">✓ Available</span>' :
-                    '<span class="domain-status taken">✗ Taken</span>';
-
-                const actionBtn = result.available ?
-                    `<button class="domain-action" onclick="addToCart('${result.domain}', ${result.price})">Add to Cart</button>` :
-                    `<button class="domain-action offer" onclick="alert('Make Offer coming soon!')">Make Offer</button>`;
-
-                resultEl.innerHTML = `
-                    <div class="domain-info">
-                        <div class="domain-name">${result.domain}</div>
-                        ${status}
-                    </div>
-                    ${result.available ? `<div class="domain-price">$${result.price.toFixed(2)}/yr</div>` : '<div class="domain-price">—</div>'}
-                    ${actionBtn}
+            baseNames.forEach(name => {
+                const domain = `${name}.com`;
+                const card = document.createElement('div');
+                card.className = 'domain-card';
+                card.innerHTML = `
+                    <div class="domain-card-name">${domain}</div>
+                    <div class="domain-card-price">$12</div>
+                    <div class="domain-card-period">one-time + $17.99/month</div>
+                    <button class="domain-claim-btn" onclick="claimDomain('${domain}')">Claim This Domain</button>
                 `;
-
-                resultsDiv.appendChild(resultEl);
+                container.appendChild(card);
             });
 
-            resultsDiv.classList.add('active');
-            resultsDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            document.getElementById('domainGrid').classList.add('active');
+            document.getElementById('domainGrid').scrollIntoView({ behavior: 'smooth' });
         }
 
-        // FAQ toggle
+        function claimDomain(domain) {
+            // Redirect to Stripe checkout
+            window.location.href = 'https://buy.stripe.com/fZu9ASdnsbUn642eQofbq05';
+        }
+
+        function scrollToChat() {
+            document.getElementById('chatInput').focus();
+            document.querySelector('.chat-container').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function checkout(product) {
+            window.location.href = 'https://buy.stripe.com/fZu9ASdnsbUn642eQofbq05';
+        }
+
+        function referralSignup() {
+            const email = prompt('Enter your email to join the Ai-Ai Referral Program:');
+            if (email) {
+                // Send to API
+                fetch('https://super-hero-api.replit.app/api/referral/signup', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email: email, program: 'url-superhero' })
+                })
+                .then(r => r.json())
+                .then(data => {
+                    if (data.success) {
+                        alert('Welcome to the referral program! Check your email for your unique referral link.');
+                    } else {
+                        alert('Something went wrong. Please try again or contact support.');
+                    }
+                })
+                .catch(err => {
+                    alert('Referral signup is opening soon. Join our waitlist!');
+                });
+            }
+        }
+
+        // FAQ Toggle
         function toggleFaq(element) {
             const answer = element.nextElementSibling;
             const toggle = element.querySelector('.faq-toggle');
 
-            // Close all other FAQs
             document.querySelectorAll('.faq-answer.active').forEach(el => {
                 if (el !== answer) {
                     el.classList.remove('active');
@@ -1418,20 +1605,28 @@
                 }
             });
 
-            // Toggle current FAQ
             answer.classList.toggle('active');
             toggle.classList.toggle('active');
         }
 
-        // Initialize
-        updateCartUI();
+        // Terms Modal
+        function openTerms() {
+            document.getElementById('termsModal').classList.add('active');
+        }
 
-        // Allow Enter key in search
-        document.getElementById('hero-search').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                performSearch();
+        function closeTerms() {
+            document.getElementById('termsModal').classList.remove('active');
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('termsModal');
+            if (event.target === modal) {
+                modal.classList.remove('active');
             }
-        });
+        }
+
+        // Initialize
+        addChatMessage(chatQuestions[0], 'ai');
     </script>
 </body>
 </html>
