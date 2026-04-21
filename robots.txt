@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://urlsuperhero.com/sitemap.xml
+Sitemap: https://www.urlsuperhero.com/sitemap.xml
